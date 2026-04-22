@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <radialGradient id="bgGrad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#3b2f7a"/>
+      <stop offset="100%" stop-color="#1a1440"/>
+    </radialGradient>
+    <radialGradient id="sunGrad" cx="40%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#ffe066"/>
+      <stop offset="60%" stop-color="#ffb700"/>
+      <stop offset="100%" stop-color="#ff8c00"/>
+    </radialGradient>
+    <radialGradient id="cloudGrad" cx="40%" cy="30%" r="70%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c8d8f0"/>
+    </radialGradient>
+    <filter id="sunGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="1.5" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="cloudShadow" x="-10%" y="-10%" width="130%" height="140%">
+      <feDropShadow dx="0" dy="1.5" stdDeviation="1.2" flood-color="#2a1f6a" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+
+  <!-- Background circle -->
+  <circle cx="32" cy="32" r="31" fill="url(#bgGrad)"/>
+
+  <!-- Sun rays (behind cloud) -->
+  <g filter="url(#sunGlow)" opacity="0.9">
+    <!-- Ray lines -->
+    <line x1="22" y1="22" x2="18" y2="18" stroke="#ffe066" stroke-width="1.8" stroke-linecap="round"/>
+    <line x1="20" y1="28" x2="15" y2="27" stroke="#ffe066" stroke-width="1.8" stroke-linecap="round"/>
+    <line x1="22" y1="34" x2="17" y2="37" stroke="#ffe066" stroke-width="1.8" stroke-linecap="round"/>
+    <line x1="28" y1="20" x2="27" y2="14" stroke="#ffe066" stroke-width="1.8" stroke-linecap="round"/>
+    <line x1="34" y1="19" x2="35" y2="13" stroke="#ffe066" stroke-width="1.8" stroke-linecap="round"/>
+    <!-- Sun core -->
+    <circle cx="27" cy="27" r="8" fill="url(#sunGrad)"/>
+  </g>
+
+  <!-- Main cloud body -->
+  <g filter="url(#cloudShadow)">
+    <!-- Cloud shape made of overlapping circles -->
+    <circle cx="30" cy="38" r="9"   fill="url(#cloudGrad)"/>
+    <circle cx="41" cy="40" r="7"   fill="url(#cloudGrad)"/>
+    <circle cx="22" cy="40" r="6.5" fill="url(#cloudGrad)"/>
+    <circle cx="35" cy="34" r="8"   fill="url(#cloudGrad)"/>
+    <circle cx="26" cy="35" r="7"   fill="url(#cloudGrad)"/>
+    <!-- Fill bottom of cloud -->
+    <rect x="16" y="39" width="32" height="9" rx="4" fill="url(#cloudGrad)"/>
+  </g>
+
+  <!-- Subtle gloss on cloud -->
+  <ellipse cx="30" cy="34" rx="9" ry="4" fill="white" opacity="0.18"/>
+
+  <!-- Border ring -->
+  <circle cx="32" cy="32" r="30.5" fill="none" stroke="#5a4aaa" stroke-width="1" opacity="0.6"/>
+</svg>

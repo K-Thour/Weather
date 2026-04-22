@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <title>Weather Favicon Preview</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg"/>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;600&display=swap');
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      min-height: 100vh;
+      background: linear-gradient(135deg, #1a1440 0%, #2d1f6e 50%, #1a1440 100%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      font-family: 'DM Sans', sans-serif;
+      color: #e0d8ff;
+      gap: 40px;
+      padding: 40px;
+    }
+    h1 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #a98dff;
+      text-align: center;
+    }
+    .grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 32px;
+      align-items: flex-end;
+      justify-content: center;
+    }
+    .item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+    }
+    .item img {
+      display: block;
+      border-radius: 22%;
+      box-shadow: 0 4px 24px rgba(90,74,170,0.5);
+    }
+    .label {
+      font-size: 0.72rem;
+      color: #7c6bbf;
+      letter-spacing: 0.08em;
+    }
+    .browser-bar {
+      background: #2a2060;
+      border-radius: 10px;
+      padding: 10px 20px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      border: 1px solid #3d2f8a;
+      width: 320px;
+    }
+    .browser-bar img { border-radius: 4px; }
+    .tab-title { font-size: 0.82rem; color: #c4b8ff; }
+    .dots { display:flex; gap:5px; margin-right:8px; }
+    .dot { width:9px; height:9px; border-radius:50%; }
+    .d1{background:#ff5f57;} .d2{background:#febc2e;} .d3{background:#28c840;}
+    .section-label {
+      font-size: 0.7rem;
+      color: #6654b0;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      margin-bottom: -20px;
+      align-self: flex-start;
+    }
+  </style>
+</head>
+<body>
+  <h1>🌦️ Weather App — Favicon</h1>
+
+  <!-- Size previews -->
+  <div class="grid">
+    <div class="item">
+      <img src="favicon.svg" width="16" height="16" alt="16px"/>
+      <span class="label">16×16</span>
+    </div>
+    <div class="item">
+      <img src="favicon.svg" width="32" height="32" alt="32px"/>
+      <span class="label">32×32</span>
+    </div>
+    <div class="item">
+      <img src="favicon.svg" width="48" height="48" alt="48px"/>
+      <span class="label">48×48</span>
+    </div>
+    <div class="item">
+      <img src="favicon.svg" width="64" height="64" alt="64px"/>
+      <span class="label">64×64</span>
+    </div>
+    <div class="item">
+      <img src="favicon.svg" width="128" height="128" alt="128px"/>
+      <span class="label">128×128</span>
+    </div>
+    <div class="item">
+      <img src="favicon.svg" width="180" height="180" alt="180px"/>
+      <span class="label">180×180 (Apple)</span>
+    </div>
+  </div>
+
+  <!-- Browser tab simulation -->
+  <div style="display:flex;flex-direction:column;align-items:center;gap:8px;">
+    <span class="section-label">Browser tab preview</span>
+    <div class="browser-bar">
+      <div class="dots"><div class="dot d1"></div><div class="dot d2"></div><div class="dot d3"></div></div>
+      <img src="favicon.svg" width="16" height="16" alt="favicon"/>
+      <span class="tab-title">Weather App by Thour</span>
+    </div>
+  </div>
+
+  <!-- Usage snippet -->
+  <div style="background:#1a1440;border:1px solid #3d2f8a;border-radius:10px;padding:18px 24px;max-width:420px;width:100%;">
+    <p style="font-size:0.7rem;color:#6654b0;letter-spacing:0.12em;text-transform:uppercase;margin-bottom:10px;">Usage in &lt;head&gt;</p>
+    <pre style="font-size:0.75rem;color:#b8a8ff;line-height:1.7;white-space:pre-wrap;">&lt;link rel="icon" type="image/svg+xml"
+      href="/favicon.svg"&gt;
+&lt;link rel="apple-touch-icon"
+      href="/favicon.svg"&gt;</pre>
+  </div>
+</body>
+</html>
